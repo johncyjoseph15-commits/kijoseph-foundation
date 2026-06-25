@@ -100,14 +100,19 @@ section{padding:8rem 3rem;position:relative;overflow:hidden}
 /* === VISION MISSION === */
 .vm{background:var(--navy-deep);padding:8rem 3rem}
 .vm .sec-title{color:white}
-.vm-row{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:4rem}
-.vm-item{padding:3.5rem;position:relative;transition:background 0.5s}
-.vm-item:first-child{border-right:1px solid rgba(184,115,51,0.08)}
-.vm-item:hover{background:rgba(184,115,51,0.03)}
-.vm-num{font-family:'Playfair Display',serif;font-size:5rem;font-weight:800;color:rgba(184,115,51,0.06);line-height:1;margin-bottom:1rem;transition:color 0.5s}
-.vm-item:hover .vm-num{color:rgba(184,115,51,0.12)}
-.vm-item h3{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.6rem;margin-bottom:1.2rem;font-weight:600}
-.vm-item p{color:rgba(255,255,255,0.55);font-size:0.95rem;line-height:2}
+.vm-row{display:grid;grid-template-columns:1fr 60px 1fr;gap:0;margin-top:4rem;align-items:start}
+.vm-item{padding:3rem 3.5rem;position:relative}
+.vm-item h3{font-family:'Playfair Display',serif;color:white;font-size:1.8rem;margin-bottom:0.5rem;font-weight:700}
+.vm-sub{font-size:0.7rem;text-transform:uppercase;letter-spacing:0.3em;color:var(--gold);margin-bottom:1.5rem;font-weight:500}
+.vm-item p{color:rgba(255,255,255,0.55);font-size:0.95rem;line-height:2.1}
+.vm-divider{display:flex;flex-direction:column;align-items:center;padding-top:2.5rem}
+.vm-divider-line{width:1px;height:120px;background:linear-gradient(to bottom,transparent,var(--gold),transparent);margin-bottom:12px}
+.vm-divider-diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);margin-bottom:12px}
+.vm-divider-line2{width:1px;height:120px;background:linear-gradient(to bottom,transparent,var(--gold),transparent)}
+.vm-icon{width:52px;height:52px;border:1px solid rgba(184,115,51,0.25);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;transition:all 0.4s}
+.vm-item:hover .vm-icon{border-color:var(--gold);background:rgba(184,115,51,0.08)}
+.vm-icon svg{stroke:var(--gold);opacity:0.7}
+.vm-quote{font-family:'Playfair Display',serif;font-style:italic;color:rgba(255,255,255,0.25);font-size:0.88rem;margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid rgba(184,115,51,0.08);line-height:1.8}
 
 /* === CAREER + FAMILY === */
 .career{background:var(--ivory)}
@@ -206,7 +211,9 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   .about-img{max-width:300px;margin:0 auto}
   .founder-img{max-width:240px}
   .vm-row{grid-template-columns:1fr}
-  .vm-item:first-child{border-right:none;border-bottom:1px solid rgba(184,115,51,0.08)}
+  .vm-divider{flex-direction:row;padding:0;margin:1rem 0}
+  .vm-divider-line,.vm-divider-line2{width:80px;height:1px}
+  .vm-divider-diamond{margin:0 10px}
   .val-grid{grid-template-columns:1fr}
   .init-row{grid-template-columns:1fr}
   .split-layout{grid-template-columns:1fr;gap:1.5rem}
@@ -281,14 +288,23 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
     <h2 class="sec-title r r-up r-d1">Our Vision &amp; Mission</h2>
     <div class="vm-row">
       <div class="vm-item r r-left">
-        <div class="vm-num">01</div>
-        <h3>Vision</h3>
+        <div class="vm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></div>
+        <h3>Our Vision</h3>
+        <div class="vm-sub">What we aspire to</div>
         <p>To inspire individuals and communities through timeless values that promote integrity, education, leadership, compassion, and service.</p>
+        <div class="vm-quote">&ldquo;A legacy is not what is left behind, but what is carried forward.&rdquo;</div>
       </div>
-      <div class="vm-item r r-right r-d2">
-        <div class="vm-num">02</div>
-        <h3>Mission</h3>
+      <div class="vm-divider r r-up r-d2">
+        <div class="vm-divider-line"></div>
+        <div class="vm-divider-diamond"></div>
+        <div class="vm-divider-line2"></div>
+      </div>
+      <div class="vm-item r r-right r-d3">
+        <div class="vm-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
+        <h3>Our Mission</h3>
+        <div class="vm-sub">How we achieve it</div>
         <p>To preserve and promote the life lessons, principles, and values of K. I. Joseph by encouraging educational growth, community development, ethical leadership, and meaningful service to society.</p>
+        <div class="vm-quote">&ldquo;Values endure when they are lived, not just spoken.&rdquo;</div>
       </div>
     </div>
   </div>
