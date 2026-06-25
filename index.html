@@ -1,19 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<script>document.documentElement.classList.add('js')</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="canonical" href="https://www.kijosephfoundation.org/" />
 <title>K I Joseph Memorial Foundation | Preserving a Legacy. Inspiring Generations.</title>
 <meta name="description" content="Founded by Johncy Joseph in loving memory of K. I. Joseph (1954-2011), the Foundation promotes education, values, community development, and service inspired by a life of faith, integrity, humility, and compassion." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://johncyjoseph15-commits.github.io/kijoseph-foundation/" />
+<meta property="og:url" content="https://www.kijosephfoundation.org/" />
 <meta property="og:title" content="K I Joseph Memorial Foundation | Preserving a Legacy. Inspiring Generations." />
 <meta property="og:description" content="Honoring the legacy of K. I. Joseph through education, community development, leadership, and service to inspire future generations." />
-<meta property="og:image" content="https://johncyjoseph15-commits.github.io/kijoseph-foundation/og-cover.jpg" />
+<meta property="og:image" content="https://www.kijosephfoundation.org/og-cover.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="K I Joseph Memorial Foundation" />
 <meta name="twitter:description" content="Preserving a Legacy. Inspiring Generations." />
-<meta name="twitter:image" content="https://johncyjoseph15-commits.github.io/kijoseph-foundation/og-cover.jpg" />
+<meta name="twitter:image" content="https://www.kijosephfoundation.org/og-cover.jpg" />
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "K. I. Joseph Memorial Foundation",
+  "alternateName": "KIJ Memorial Foundation",
+  "url": "https://www.kijosephfoundation.org/",
+  "logo": "https://www.kijosephfoundation.org/og-cover.jpg",
+  "image": "https://www.kijosephfoundation.org/og-cover.jpg",
+  "description": "Founded by Johncy Joseph in loving memory of K. I. Joseph (1954-2011), the Foundation promotes education, values, community development, and service inspired by a life of faith, integrity, humility, and compassion.",
+  "slogan": "Preserving a Legacy. Inspiring Generations. Shaping the Future Through Values.",
+  "founder": {
+    "@type": "Person",
+    "name": "Johncy Joseph"
+  },
+  "email": "info@kijosephfoundation.org",
+  "telephone": "+91-9895-899-533",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "general inquiries",
+    "email": "info@kijosephfoundation.org",
+    "telephone": "+91-9895-899-533"
+  }
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='10' y='10' width='12' height='12' rx='2' transform='rotate(45 16 16)' fill='%23B87333'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -73,14 +100,20 @@ nav.scrolled{background:rgba(15,26,46,0.97);backdrop-filter:blur(16px);padding:0
 @keyframes scrollPulse{0%,100%{opacity:0.2;transform:scaleY(0.7)}50%{opacity:0.6;transform:scaleY(1)}}
 
 /* === REVEAL ANIMATIONS === */
-.r{opacity:0;transition:all 1s cubic-bezier(0.16,1,0.3,1)}
-.r-up{transform:translateY(60px)}
-.r-left{transform:translateX(-80px)}
-.r-right{transform:translateX(80px)}
-.r-scale{transform:scale(0.9)}
+.r{transition:all 1s cubic-bezier(0.16,1,0.3,1)}
+.js .r{opacity:0}
+.js .r-up{transform:translateY(60px)}
+.js .r-left{transform:translateX(-80px)}
+.js .r-right{transform:translateX(80px)}
+.js .r-scale{transform:scale(0.9)}
 .r.vis{opacity:1;transform:translate(0) scale(1)}
 .r-d1{transition-delay:0.1s}.r-d2{transition-delay:0.2s}.r-d3{transition-delay:0.3s}
 .r-d4{transition-delay:0.4s}.r-d5{transition-delay:0.5s}.r-d6{transition-delay:0.6s}
+@media(prefers-reduced-motion:reduce){
+*,*::before,*::after{animation-duration:0.001ms!important;animation-iteration-count:1!important;transition-duration:0.001ms!important;scroll-behavior:auto!important}
+.js .r{opacity:1!important;transform:none!important}
+.hero-particles,.scroll-arrow{display:none}
+}
 
 /* === SECTION BASE === */
 section{padding:8rem 3rem;position:relative;overflow:hidden}
@@ -281,7 +314,7 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   .footer-row{flex-direction:column;gap:2rem}
   .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
   .contact-row{flex-direction:column;align-items:center}
-  .r-left,.r-right{transform:translateY(40px)}
+  .js .r-left,.js .r-right{transform:translateY(40px)}
 }
 @media(max-width:600px){
   .gallery-grid{grid-template-columns:1fr;grid-auto-rows:180px}
