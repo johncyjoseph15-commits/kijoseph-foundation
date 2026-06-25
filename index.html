@@ -236,16 +236,16 @@ section{padding:8rem 3rem;position:relative;overflow:hidden}
 .founder-sig span{display:block;font-style:normal;font-family:'Inter',sans-serif;font-size:0.7rem;color:rgba(255,255,255,0.3);letter-spacing:0.25em;text-transform:uppercase;margin-top:0.5rem}
 
 
-.quote-feature{background:linear-gradient(135deg,#0A1424 0%,#162240 50%,#0A1424 100%);padding:5.5rem 3rem;position:relative;overflow:hidden;text-align:center}
-.quote-feature::before{content:'\201C';position:absolute;top:1.5rem;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-size:8rem;color:rgba(184,115,51,0.12);line-height:1;pointer-events:none}
-.quote-feature::after{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(184,115,51,0.08) 0%,transparent 60%);pointer-events:none}
-.quote-feature .qf-inner{border-top:1px solid rgba(184,115,51,0.15);border-bottom:1px solid rgba(184,115,51,0.15);padding:2.5rem 0;margin-top:2rem}
+.quote-feature{background:var(--cream);padding:5.5rem 3rem;position:relative;overflow:hidden;text-align:center}
+.quote-feature::before{content:'\201C';position:absolute;top:1.5rem;left:50%;transform:translateX(-50%);font-family:'Playfair Display',serif;font-size:8rem;color:rgba(184,115,51,0.18);line-height:1;pointer-events:none}
+.quote-feature::after{content:'';position:absolute;top:50%;left:50%;width:600px;height:600px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(184,115,51,0.06) 0%,transparent 60%);pointer-events:none}
+.quote-feature .qf-inner{border-top:1px solid rgba(184,115,51,0.25);border-bottom:1px solid rgba(184,115,51,0.25);padding:2.5rem 0;margin-top:2rem}
 .quote-feature .qf-inner{max-width:760px;margin:0 auto;position:relative;z-index:1}
-.qf-text{font-family:'Playfair Display',serif;font-size:clamp(1.35rem,2.6vw,1.9rem);font-style:italic;color:white;line-height:1.65;font-weight:500;margin-bottom:1.8rem}
+.qf-text{font-family:'Playfair Display',serif;font-size:clamp(1.35rem,2.6vw,1.9rem);font-style:italic;color:var(--navy);line-height:1.65;font-weight:500;margin-bottom:1.8rem}
 .qf-text em{color:var(--gold);font-style:italic}
 .qf-line{width:60px;height:1px;background:var(--gold);margin:0 auto 1.5rem}
 .qf-author{font-family:'Playfair Display',serif;color:var(--gold);font-size:1.1rem;font-style:italic}
-.qf-role{font-size:0.7rem;color:rgba(255,255,255,0.4);letter-spacing:0.25em;text-transform:uppercase;margin-top:0.4rem}
+.qf-role{font-size:0.7rem;color:var(--text-light);letter-spacing:0.25em;text-transform:uppercase;margin-top:0.4rem}
 /* === BELIEF === */
 .belief{background:var(--cream);text-align:center;padding:8rem 3rem;position:relative}
 .belief::before{content:'';position:absolute;top:0;left:50%;width:1px;height:50px;background:linear-gradient(to bottom,transparent,var(--gold));transform:translateX(-50%)}
