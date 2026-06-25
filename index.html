@@ -14,6 +14,7 @@
 <meta name="twitter:title" content="K I Joseph Memorial Foundation" />
 <meta name="twitter:description" content="Preserving a Legacy. Inspiring Generations." />
 <meta name="twitter:image" content="https://johncyjoseph15-commits.github.io/kijoseph-foundation/og-cover.jpg" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect x='10' y='10' width='12' height='12' rx='2' transform='rotate(45 16 16)' fill='%23B87333'/></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -122,6 +123,17 @@ section{padding:8rem 3rem;position:relative;overflow:hidden}
 .split-label::before{content:'';position:absolute;top:0;left:0;width:40px;height:2px;background:var(--gold)}
 .split-label h3{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--navy);font-weight:600;line-height:1.3}
 
+
+.life-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-top:3rem}
+.life-card{padding:2.5rem;background:white;border-radius:8px;box-shadow:0 2px 12px rgba(0,0,0,0.03);transition:all 0.5s cubic-bezier(0.4,0,0.2,1);position:relative;overflow:hidden}
+.life-card::before{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--gold);transform:scaleX(0);transition:transform 0.5s;transform-origin:left}
+.life-card:hover{transform:translateY(-4px);box-shadow:0 15px 40px rgba(0,0,0,0.07)}
+.life-card:hover::before{transform:scaleX(1)}
+.life-icon{width:48px;height:48px;border-radius:12px;background:var(--navy-deep);display:flex;align-items:center;justify-content:center;color:var(--gold);margin-bottom:1.5rem;transition:all 0.4s}
+.life-card:hover .life-icon{background:var(--gold);color:white}
+.life-card h3{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--navy);margin-bottom:1rem;font-weight:700}
+.life-card p{font-size:0.92rem;color:var(--text-light);line-height:2}
+.life-card p+p{margin-top:1rem}
 /* === VALUES === */
 .values{background:var(--ivory);padding:8rem 3rem}
 .values .sec-title{color:var(--navy)}
@@ -141,18 +153,18 @@ section{padding:8rem 3rem;position:relative;overflow:hidden}
 .val-item p{color:var(--text-light);font-size:0.9rem;line-height:1.9}
 
 /* === TIMELINE === */
-.timeline{background:var(--warm);padding:8rem 3rem}
+.timeline{background:var(--navy-deep);padding:8rem 3rem}
 .tl-track{margin-top:4rem;position:relative}
-.tl-track::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,var(--gold-pale),var(--gold),var(--gold-pale),transparent);transform:translateX(-50%)}
+.tl-track::before{content:'';position:absolute;left:50%;top:0;bottom:0;width:1px;background:linear-gradient(to bottom,transparent,rgba(184,115,51,0.3),var(--gold),rgba(184,115,51,0.3),transparent);transform:translateX(-50%)}
 .tl-row{display:grid;grid-template-columns:1fr 1fr;position:relative;min-height:120px}
-.tl-row::before{content:'';position:absolute;left:50%;top:50%;width:10px;height:10px;border:2px solid var(--gold);border-radius:50%;background:var(--warm);transform:translate(-50%,-50%);z-index:2;transition:all 0.4s}
+.tl-row::before{content:'';position:absolute;left:50%;top:50%;width:10px;height:10px;border:2px solid var(--gold);border-radius:50%;background:var(--navy-deep);transform:translate(-50%,-50%);z-index:2;transition:all 0.4s}
 .tl-row:hover::before{background:var(--gold);box-shadow:0 0 20px rgba(197,148,58,0.25)}
 .tl-l{text-align:right;padding:2rem 3rem 2rem 1rem}
 .tl-r{padding:2rem 1rem 2rem 3rem}
 .tl-row:nth-child(even) .tl-l{order:2;text-align:left;padding:2rem 1rem 2rem 3rem}
 .tl-row:nth-child(even) .tl-r{order:1;text-align:right;padding:2rem 3rem 2rem 1rem}
-.tl-yr{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--navy);font-weight:700;margin-bottom:0.4rem}
-.tl-desc{font-size:0.9rem;color:var(--text-light);line-height:1.85}
+.tl-yr{font-family:'Playfair Display',serif;font-size:1.8rem;color:var(--gold);font-weight:700;margin-bottom:0.4rem}
+.tl-desc{font-size:0.9rem;color:rgba(255,255,255,0.55);line-height:1.85}
 
 /* === INITIATIVES === */
 .initiatives{background:var(--ivory);padding:8rem 3rem}
@@ -220,11 +232,12 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   .vm-divider-line,.vm-divider-line2{width:80px;height:1px}
   .vm-divider-diamond{margin:0 10px}
   .val-grid{grid-template-columns:1fr;gap:1.2rem}
+  .life-grid{grid-template-columns:1fr}
   .init-row{grid-template-columns:1fr}
   .split-layout{grid-template-columns:1fr;gap:1.5rem}
   .tl-track::before{left:16px}
   .tl-row{grid-template-columns:1fr;padding-left:2.5rem}
-  .tl-row::before{left:16px}
+  .tl-row::before{left:16px;background:var(--navy-deep)}
   .tl-l,.tl-r,.tl-row:nth-child(even) .tl-l,.tl-row:nth-child(even) .tl-r{text-align:left;padding:1rem 0;order:unset}
   .footer-row{flex-direction:column;gap:2rem}
   .footer-bottom{flex-direction:column;gap:0.5rem;text-align:center}
@@ -235,6 +248,12 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   .hero-logo{max-width:280px}
   .vm-item,.val-item{padding:2rem 1.5rem}
 }
+
+.btt{position:fixed;bottom:2rem;right:2rem;width:44px;height:44px;border-radius:50%;background:var(--navy);border:1px solid rgba(184,115,51,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;opacity:0;visibility:hidden;transition:all 0.4s;z-index:99;box-shadow:0 4px 15px rgba(0,0,0,0.1)}
+.btt.show{opacity:1;visibility:visible}
+.btt:hover{background:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+.btt svg{stroke:var(--gold);transition:stroke 0.3s}
+.btt:hover svg{stroke:white}
 </style>
 </head>
 <body>
@@ -255,7 +274,7 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
 </div>
 </nav>
 
-<section class="hero">
+<section class="hero" role="banner">
   <div class="hero-particles">
     <div class="pt pt1"></div><div class="pt pt2"></div><div class="pt pt3"></div><div class="pt pt4"></div><div class="pt pt5"></div>
     <div class="pt pt6"></div><div class="pt pt7"></div><div class="pt pt8"></div><div class="pt pt9"></div><div class="pt pt10"></div>
@@ -270,7 +289,7 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   <div class="scroll-arrow"><span></span><small>Scroll</small></div>
 </section>
 
-<section class="about" id="about">
+<section class="about" id="about" role="region" aria-label="About K. I. Joseph">
   <div class="sec-inner">
     <div class="sec-label r r-up">About</div>
     <h2 class="sec-title r r-up r-d1" style="color:var(--navy)">A Life Defined<br>by Character</h2>
@@ -287,7 +306,7 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<section class="vm">
+<section class="vm" role="region" aria-label="Vision and Mission">
   <div class="sec-inner" style="text-align:center">
     <div class="sec-label r r-up" style="color:var(--gold-light)">Purpose</div>
     <h2 class="sec-title r r-up r-d1">Our Vision &amp; Mission</h2>
@@ -317,32 +336,26 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
 
 <section class="career">
   <div class="sec-inner">
-    <div class="sec-label r r-up">Professional Journey</div>
-    <div class="split-layout">
-      <div class="split-label r r-left"><h3>A Career Built on Dedication</h3></div>
-      <div class="sec-text r r-right r-d2">
+    <div class="sec-label r r-up">His Journey</div>
+    <h2 class="sec-title r r-up r-d1" style="color:var(--navy)">Career &amp; Family</h2>
+    <div class="life-grid">
+      <div class="life-card r r-left">
+        <div class="life-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a4 4 0 0 0-8 0v2"/></svg></div>
+        <h3>Professional Journey</h3>
         <p>In 1972, K. I. Joseph began his professional career with the Central Government of India, marking the start of a distinguished journey dedicated to public service, responsibility, and excellence.</p>
-        <p>Throughout his career, he demonstrated an unwavering commitment to honesty, discipline, and professionalism. He approached every responsibility with sincerity and believed that true success was achieved not through personal recognition, but through fulfilling one&rsquo;s duties with integrity and purpose.</p>
-        <p>While his professional accomplishments were significant, he considered his greatest responsibility to be his family. Through perseverance and commitment, he worked tirelessly to provide stability, guidance, and opportunities for his loved ones.</p>
+        <p>Throughout his career, he demonstrated an unwavering commitment to honesty, discipline, and professionalism. He believed that true success was achieved through fulfilling one&rsquo;s duties with integrity and purpose.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<section class="family">
-  <div class="sec-inner">
-    <div class="sec-label r r-up">Family Life</div>
-    <div class="split-layout">
-      <div class="split-label r r-left"><h3>The Foundation of Everything</h3></div>
-      <div class="sec-text r r-right r-d2">
+      <div class="life-card r r-right r-d2">
+        <div class="life-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div>
+        <h3>Family Life</h3>
         <p>In 1979, K. I. Joseph married Saramma Joseph, and together they built a family rooted in faith, love, respect, and strong values. As a devoted husband and loving father of three children, he believed that family was life&rsquo;s most important responsibility and greatest blessing.</p>
-        <p>He taught through example, demonstrating honesty, humility, discipline, compassion, and resilience in everyday life. The values he instilled continue to guide future generations and remain one of his most enduring legacies.</p>
+        <p>He taught through example, demonstrating honesty, humility, discipline, compassion, and resilience in everyday life. The values he instilled continue to guide future generations.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="values" id="values">
+<section class="values" id="values" role="region" aria-label="Core Values">
   <div class="sec-inner" style="text-align:center">
     <div class="sec-label r r-up">Legacy &amp; Values</div>
     <h2 class="sec-title r r-up r-d1">Principles That Endure</h2>
@@ -375,10 +388,10 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<section class="timeline" id="timeline">
+<section class="timeline" id="timeline" role="region" aria-label="Life Timeline">
   <div class="sec-inner" style="text-align:center">
-    <div class="sec-label r r-up">Timeline</div>
-    <h2 class="sec-title r r-up r-d1" style="color:var(--navy)">A Remarkable Life</h2>
+    <div class="sec-label r r-up" style="color:var(--gold-light)">Timeline</div>
+    <h2 class="sec-title r r-up r-d1" style="color:white">A Remarkable Life</h2>
     <div class="tl-track">
       <div class="tl-row r r-up"><div class="tl-l"><div class="tl-yr">1954</div><div class="tl-desc">Born in Melukavu, Kottayam, Kerala.</div></div><div class="tl-r"></div></div>
       <div class="tl-row r r-up r-d1"><div class="tl-l"></div><div class="tl-r"><div class="tl-yr">1972</div><div class="tl-desc">Began his professional career with the Central Government of India.</div></div></div>
@@ -390,7 +403,7 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<section class="initiatives" id="initiatives">
+<section class="initiatives" id="initiatives" role="region" aria-label="Foundation Initiatives">
   <div class="sec-inner">
     <div class="sec-label r r-up">Foundation Initiatives</div>
     <h2 class="sec-title r r-up r-d1" style="color:var(--navy)">Creating Lasting Impact</h2>
@@ -429,7 +442,7 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<section class="founder" id="founder">
+<section class="founder" id="founder" role="region" aria-label="Founder Message">
   <div class="sec-inner">
     <div class="sec-label r r-up" style="color:var(--gold-light)">Founder&rsquo;s Message</div>
     <h2 class="sec-title r r-up r-d1">From Johncy Joseph</h2>
@@ -457,11 +470,12 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<section class="contact" id="contact">
+<section class="contact" id="contact" role="region" aria-label="Contact Information">
   <div class="sec-inner">
     <div class="sec-label r r-up">Contact</div>
     <h2 class="sec-title r r-up r-d1" style="color:var(--navy)">Get in Touch</h2>
-    <div class="contact-row r r-up r-d2">
+    <p class="sec-text r r-up r-d2" style="margin:0 auto 2.5rem;text-align:center">We welcome individuals, organizations, and communities who share our commitment to education, values, and positive social impact.</p>
+    <div class="contact-row r r-up r-d3">
       <a href="mailto:info@kijosephfoundation.org" class="contact-link">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
         info@kijosephfoundation.org
@@ -474,12 +488,16 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
   </div>
 </section>
 
-<footer>
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-row">
       <div class="footer-brand">
         <div class="footer-brand-name">K. I. Joseph Memorial Foundation</div>
         <p>Preserving the timeless values of faith, integrity, humility, and service for future generations.</p>
+        <div style="margin-top:1rem;display:flex;gap:0.8rem">
+          <a href="mailto:info@kijosephfoundation.org" aria-label="Email" style="width:32px;height:32px;border-radius:50%;border:1px solid rgba(184,115,51,0.2);display:flex;align-items:center;justify-content:center;transition:all 0.3s;text-decoration:none" onmouseover="this.style.borderColor='var(--gold)';this.style.background='rgba(184,115,51,0.1)'" onmouseout="this.style.borderColor='rgba(184,115,51,0.2)';this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1.5"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg></a>
+          <a href="tel:+919895899533" aria-label="Phone" style="width:32px;height:32px;border-radius:50%;border:1px solid rgba(184,115,51,0.2);display:flex;align-items:center;justify-content:center;transition:all 0.3s;text-decoration:none" onmouseover="this.style.borderColor='var(--gold)';this.style.background='rgba(184,115,51,0.1)'" onmouseout="this.style.borderColor='rgba(184,115,51,0.2)';this.style.background='transparent'"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#B87333" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></a>
+        </div>
       </div>
       <ul class="footer-links">
         <li><a href="/">Home</a></li>
@@ -497,6 +515,7 @@ footer{background:var(--navy-deep);padding:4rem 3rem 2rem}
     </div>
   </div>
 </footer>
+<button class="btt" id="btt" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg></button>
 
 <script>
 const nav=document.getElementById('nav');
@@ -505,6 +524,9 @@ document.getElementById('hamburger').addEventListener('click',()=>document.getEl
 document.querySelectorAll('#navLinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navLinks').classList.remove('open')));
 const obs=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}})},{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.r').forEach(el=>obs.observe(el));
+const btt=document.getElementById('btt');
+window.addEventListener('scroll',()=>{btt.classList.toggle('show',scrollY>600)});
+btt.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
 </script>
 </body>
 </html>
